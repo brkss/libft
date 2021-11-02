@@ -34,7 +34,7 @@ strchr			YES		YES		NO
 
 strrchr			YES		YES		NO
 
-strncmp			NO		NO		NO
+strncmp			YES		YES		NO
 
 memchr			NO		NO		NO
 

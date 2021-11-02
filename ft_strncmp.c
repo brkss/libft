@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 20:23:24 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/02 21:39:12 by bberkass         ###   ########.fr       */
+/*   Created: 2021/11/02 20:44:29 by bberkass          #+#    #+#             */
+/*   Updated: 2021/11/02 21:36:42 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
-	char	*t_s;
-	char	*holder;
-
-	holder = 0;
-	t_s = (char *)s;
-	while (*t_s)
+	while (*s1 && *s2 && n)
 	{
-		if (*t_s == c)
-			holder = t_s;
-		t_s++;
+		if (*s1 - *s2 != 0)
+			return (*s1 - *s2);
+		s1++;
+		s2++;
+		n--;
 	}
-	return (holder);
+	return (0);
 }
