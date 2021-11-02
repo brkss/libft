@@ -1,0 +1,45 @@
+
+
+FUCNTION_NAME	DONE	TESTED	MORE_TEST
+
+isalpha			YES		YES		NO
+
+isdigit			YES		YES		NO
+
+isalnum			YES		YES		NO
+
+isascii			YES		YES		NO
+
+isprint			YES		YES		NO
+
+strlen			YES		YES		NO
+
+memset			YES		YES		NO
+
+bzero			YES		YES		NO
+
+memcpy			YES		YES		NO
+
+memmove			NO		NO		NO
+
+strlcpy			YES		YES		NO
+
+strlcat			NO		NO		NO
+
+toupper			NO		NO		NO
+
+tolower			NO		NO		NO
+
+strchr			NO		NO		NO
+
+strrchr			No		NO		NO
+
+strncmp			NO		NO		NO
+
+memchr			NO		NO		NO
+
+memcmp			NO		NO		NO
+
+strnstr			NO		NO		NO
+
+atoi			NO		NO		NO
