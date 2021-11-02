@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:35:10 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/02 20:41:28 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/02 21:56:43 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ unsigned int	ft_strlcpy(char	*dst, char *src, unsigned int dstsize);
 unsigned int	ft_strlcat(char *dest, const char *src, unsigned int dstsize);
 int	 			ft_toupper(int c);
 int				ft_tolower(int c);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c);
+char			*ft_strchr(const char *s, int c);
+char			*ft_strrchr(const char *s, int c);
+void			*ft_memchr(const void *s, int c, unsigned int n);
 
 #endif
