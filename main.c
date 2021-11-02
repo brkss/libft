@@ -5,12 +5,20 @@
 
 int main(){
 
-	
+	// tolower
+	printf("c => %c \n", ft_tolower('c'));
+	printf("c => %c \n", ft_tolower('a'));
+	printf("c => %c \n", ft_tolower('S'));
+	printf("c => %c \n", ft_tolower('5'));
+
+
 	// toupper 
+	/*
 	printf("c => %c \n", ft_toupper('c'));
 	printf("c => %c \n", ft_toupper('a'));
 	printf("c => %c \n", ft_toupper('S'));
 	printf("c => %c \n", ft_toupper('5'));
+	*/
 
 	// strlcat
 	/*
