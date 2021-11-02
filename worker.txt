@@ -32,7 +32,7 @@ tolower			YES		YES		NO
 
 strchr			YES		YES		NO
 
-strrchr			No		NO		NO
+strrchr			YES		YES		NO
 
 strncmp			NO		NO		NO
 

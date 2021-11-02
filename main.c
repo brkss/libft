@@ -5,10 +5,18 @@
 
 int main(){
 
+	
+	// strrchr
+	printf("find last char => %s \n", ft_strrchr("Hello world", 'o'));
+	printf("find last char => %s \n", ft_strrchr("Hello world", 'l'));
+	printf("find last char => %s \n", ft_strrchr("Hello world", 'z'));
+	printf("find last char => %s \n", ft_strrchr("Hello world", 'p'));
+	
 	// strchr
+	/*
 	printf("find char => %s \n", ft_strchr("hello world", 'p'));
 	printf("find char => %s \n", ft_strchr("hello world", 'e'));
-
+	*/
 	// tolower
 	/*
 	printf("c => %c \n", ft_tolower('c'));
