@@ -5,12 +5,17 @@
 
 int main(){
 
+	// strchr
+	printf("find char => %s \n", ft_strchr("hello world", 'p'));
+	printf("find char => %s \n", ft_strchr("hello world", 'e'));
+
 	// tolower
+	/*
 	printf("c => %c \n", ft_tolower('c'));
 	printf("c => %c \n", ft_tolower('a'));
 	printf("c => %c \n", ft_tolower('S'));
 	printf("c => %c \n", ft_tolower('5'));
-
+*/	
 
 	// toupper 
 	/*

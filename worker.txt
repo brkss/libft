@@ -28,9 +28,9 @@ strlcat			YES		YES		NO
 
 toupper			YES		YES		NO
 
-tolower			NO		NO		NO
+tolower			YES		YES		NO
 
-strchr			NO		NO		NO
+strchr			YES		YES		NO
 
 strrchr			No		NO		NO
 
