@@ -6,11 +6,9 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:23:20 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/02 19:10:09 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/02 19:22:52 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 static unsigned int	ft_strlen(const char *s)
 {

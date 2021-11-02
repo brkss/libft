@@ -6,8 +6,14 @@
 int main(){
 
 	
-	
+	// toupper 
+	printf("c => %c \n", ft_toupper('c'));
+	printf("c => %c \n", ft_toupper('a'));
+	printf("c => %c \n", ft_toupper('S'));
+	printf("c => %c \n", ft_toupper('5'));
+
 	// strlcat
+	/*
 	char s[10] = "common";
 	char d_na[20] = "hello ";
 	char d_og[20] = "hello ";
@@ -15,7 +21,7 @@ int main(){
 	strlcat(d_og, s, 20);
 	printf("d og => %s \n", d_og);
 	printf("d na => %s \n", d_na);
-
+	*/
 
 	// stlcpy
 	/*

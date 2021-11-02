@@ -24,9 +24,9 @@ memmove			NO		NO		NO
 
 strlcpy			YES		YES		NO
 
-strlcat			NO		NO		NO
+strlcat			YES		YES		NO
 
-toupper			NO		NO		NO
+toupper			YES		YES		NO
 
 tolower			NO		NO		NO
 
