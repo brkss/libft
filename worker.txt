@@ -44,6 +44,6 @@ strnstr			YES		YES		NO
 
 atoi			YES		YES		NO
 
-calloc			NO		NO		NO
+calloc			YES		YES		NO
 
 strdup			YES		YES		NO
