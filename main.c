@@ -5,7 +5,19 @@
 #include <unistd.h>
 int main(){
 
+	// memmove
+	char s[10] = "abcdef";
+	char *d = s + 1;
+	//char d[10] = "zxywvt";
+	printf("s => %s\n", s);
+	printf("d => %s\n", d);
+	ft_memmove(d, s, 3);
+	printf("s => %s\n", s);
+	printf("d => %s\n", d);
+
+	
 	// calloc
+	/*
 	int *s = (int *)ft_calloc(10, sizeof(int));
 	int i = 0;
 	while(i < 10)
@@ -13,7 +25,7 @@ int main(){
 		printf("s => %d \n", s[i]);
 		i++;
 	}
-	
+	*/
 	/*
 	char *s = "siiiiiiii";
 	char *d = ft_strdup(s); 
