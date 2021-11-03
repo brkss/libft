@@ -1,8 +1,8 @@
 
 
-FUCNTION_NAME	DONE	TESTED	MORE_TEST
+FUCNTION_NAME	DONE	TESTED	MORE_TEST NOTE
 
-isalpha			YES		YES		NO
+isalpha			YES		YES		NO		
 
 isdigit			YES		YES		NO
 
@@ -18,7 +18,7 @@ memset			YES		YES		NO
 
 bzero			YES		YES		NO
 
-memcpy			YES		YES		NO
+memcpy			YES		YES		NO			CHECK OVERLAP WHEN COMPARING WITH ORIGINAL !
 
 memmove			NO		NO		NO
 
@@ -42,4 +42,4 @@ memcmp			YES		YES		NO
 
 strnstr			YES		YES		NO
 
-atoi			NO		NO		NO
+atoi			YES		YES		NO

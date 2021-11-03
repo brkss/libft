@@ -5,9 +5,19 @@
 
 int main(){
 
+	char s[10] = "abcdef";
+	char *d = s + 3;
+	printf("s => %s \n", s);
+	printf("d => %s \n", d);
+	ft_memcpy(d, s, 6);
+	printf("s => %s \n", s);
+	printf("d => %s \n", d);
+
+	/*
 	printf("strnstr found => %s \n", ft_strnstr("hello world this is a simple message", "e", 2));
 	printf("strnstr found => %s \n", strnstr("hello world this is a simple message", "e", 2));
-	
+	*/
+
 	// memcmp
 	/*
 	//char *s = "siiiii";
