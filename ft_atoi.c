@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:20:24 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/03 17:21:18 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/03 18:46:57 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_atoi(char *str)
 	i = 0;
 	mul = 1;
 	total = 0;
-	while (str[i] && str[i] == ' ')
+	while (str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == 32))
 		i++;
 	ft_checksign_atoi(str, &negative, &i);
 	j = i;
@@ -51,8 +51,8 @@ int	ft_atoi(char *str)
 /*
 int main()
 {
-	printf("atoi result -> %d \n", atoi("     -+5552s"));
-	printf("my atoi result -> %d \n", ft_atoi("     -+5552s"));
+	printf("atoi result -> %d \n", atoi("   \t \t  -5552s"));
+	printf("my atoi result -> %d \n", ft_atoi("  \t \t   -5552s"));
 	return (0);
 }
 */

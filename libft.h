@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:35:10 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/03 18:15:59 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/03 19:32:02 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ void			*ft_memchr(const void *s, int c, unsigned int n);
 int				ft_memcmp(const void *s1, const void *s2, unsigned int n);
 char			*ft_strnstr(const char *haystack, const char *needle, unsigned int loc);
 char			*ft_strdup(const char *s1);
+int				ft_atoi(char *str);
+void			*ft_calloc(unsigned int count, unsigned int size);
 
 #endif

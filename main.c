@@ -5,6 +5,16 @@
 #include <unistd.h>
 int main(){
 
+	// calloc
+	int *s = (int *)ft_calloc(10, sizeof(int));
+	int i = 0;
+	while(i < 10)
+	{
+		printf("s => %d \n", s[i]);
+		i++;
+	}
+	
+	/*
 	char *s = "siiiiiiii";
 	char *d = ft_strdup(s); 
 	printf("src => %s \n", s);
@@ -19,7 +29,7 @@ int main(){
 	
 	printf("src => %s \n", s);
 	printf("str dup => %s \n", d);
-
+	*/
 
 	/*
 	char s[10] = "abcdef";
