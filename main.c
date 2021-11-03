@@ -5,8 +5,11 @@
 
 int main(){
 
+	printf("strnstr found => %s \n", ft_strnstr("hello world this is a simple message", "e", 2));
+	printf("strnstr found => %s \n", strnstr("hello world this is a simple message", "e", 2));
 	
 	// memcmp
+	/*
 	//char *s = "siiiii";
 	//char *p = "siiiii";
 	int k[4] = {15, 43, 1};
@@ -19,7 +22,8 @@ int main(){
 	printf("mem cmp => %d \n", ft_memcmp("aiii", "zooo", 4));
 	printf("mem cmp => %d \n", memcmp("aiii", "zooo", 4));
 	printf("mem cmp => %d \n", memcmp("aiii", "zooo", 4));
-	
+	*/
+
 	// memchr
 	/*
 	printf("mem found this char => %s \n", ft_memchr("worst behavior", 's', 50));

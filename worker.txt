@@ -40,6 +40,6 @@ memchr			YES		YES		NO
 
 memcmp			YES		YES		NO
 
-strnstr			NO		NO		NO
+strnstr			YES		YES		NO
 
 atoi			NO		NO		NO
