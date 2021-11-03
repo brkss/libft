@@ -2,9 +2,26 @@
 #include <stdlib.h>
 #include "libft.h"
 #include <string.h>
-
+#include <unistd.h>
 int main(){
 
+	char *s = "siiiiiiii";
+	char *d = ft_strdup(s); 
+	printf("src => %s \n", s);
+	printf("str dup => %s \n", d);
+	while(*d)
+	{
+		write(1, d, 1);
+		write(1, "\n", 1);
+		d++;
+	}
+	//free(d);
+	
+	printf("src => %s \n", s);
+	printf("str dup => %s \n", d);
+
+
+	/*
 	char s[10] = "abcdef";
 	char *d = s + 3;
 	printf("s => %s \n", s);
@@ -12,6 +29,7 @@ int main(){
 	ft_memcpy(d, s, 6);
 	printf("s => %s \n", s);
 	printf("d => %s \n", d);
+	*/
 
 	/*
 	printf("strnstr found => %s \n", ft_strnstr("hello world this is a simple message", "e", 2));

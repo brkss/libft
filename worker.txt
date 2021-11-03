@@ -43,3 +43,7 @@ memcmp			YES		YES		NO
 strnstr			YES		YES		NO
 
 atoi			YES		YES		NO
+
+calloc			NO		NO		NO
+
+strdup			YES		YES		NO
