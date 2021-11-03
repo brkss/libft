@@ -38,7 +38,7 @@ strncmp			YES		YES		NO
 
 memchr			YES		YES		NO
 
-memcmp			NO		NO		NO
+memcmp			YES		YES		NO
 
 strnstr			NO		NO		NO
 

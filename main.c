@@ -5,9 +5,27 @@
 
 int main(){
 
-	// memchr
-	printf("mem found this char => %s \n", ft_memchr("worst behavior", 'b', 50));
 	
+	// memcmp
+	//char *s = "siiiii";
+	//char *p = "siiiii";
+	int k[4] = {15, 43, 1};
+	int j[4] = {5, 4, 1};
+
+	printf("mem cmp => %d \n", ft_memcmp(k, j, 3 * sizeof(int)));
+	printf("mem cmp => %d \n", memcmp(k, j, 3 * sizeof(int)));
+	printf("mem cmp => %d \n", memcmp(k, j, 3 * sizeof(int)));
+
+	printf("mem cmp => %d \n", ft_memcmp("aiii", "zooo", 4));
+	printf("mem cmp => %d \n", memcmp("aiii", "zooo", 4));
+	printf("mem cmp => %d \n", memcmp("aiii", "zooo", 4));
+	
+	// memchr
+	/*
+	printf("mem found this char => %s \n", ft_memchr("worst behavior", 's', 50));
+	printf("mem found this char => %s \n", memchr("worst behavior", 's', 50));
+	*/
+
 	// strrchr
 	/*
 	printf("find last char => %s \n", ft_strrchr("Hello world", 'o'));
