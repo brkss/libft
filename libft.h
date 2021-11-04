@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:35:10 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/03 21:14:21 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/04 11:04:13 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,11 @@ char			*ft_strdup(const char *s1);
 int				ft_atoi(char *str);
 void			*ft_calloc(unsigned int count, unsigned int size);
 void			*ft_memmove(void *dst, const void *src, unsigned int len);
+
+//
+// PART 2
+// 
+
+char	*ft_substr(char const *s, unsigned int start, unsigned int len);
 
 #endif

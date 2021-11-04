@@ -5,7 +5,14 @@
 #include <unistd.h>
 int main(){
 
+	
+	// ft_substr
+	char src[85] = "Hello World This Is A Test";
+	char *sub = ft_substr(src, 6, 4);
+	printf("sub => %s \n", sub);
+	
 	// memmove
+	/*
 	char s[15] = "abcdefghijkl";
 	//char *d = s + 3;
 	char d[10] = "zxywvt";
@@ -15,7 +22,7 @@ int main(){
 	memmove(d, s, 3);
 	printf("s => %s \n", s);
 	printf("d => %s \n", d);
-
+	*/
 	
 	// calloc
 	/*
