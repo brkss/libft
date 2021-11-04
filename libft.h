@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:35:10 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/04 11:53:30 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/04 14:49:40 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ void			*ft_memmove(void *dst, const void *src, unsigned int len);
 
 char	*ft_substr(char const *s, unsigned int start, unsigned int len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	**ft_split(const char	*s, char c)
 
 #endif
