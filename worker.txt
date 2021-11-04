@@ -64,11 +64,11 @@ ft_striteri		YES		YES		NO
 
 ft_putchar_fd	YES		YES		NO
 
-ft_putstr_fd	NO		NO		NO
+ft_putstr_fd	YES		YES		NO
 
-ft_putendl_fd	NO		NO		NO
+ft_putendl_fd	YES		YES		NO
 
-ft_putnbr_fd	NO		NO		NO
+ft_putnbr_fd	YES		YES		NO
 
 
 

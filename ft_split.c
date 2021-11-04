@@ -6,9 +6,11 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:03:50 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/04 14:49:34 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/04 18:52:14 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 static int	ft_wordcount(const char *s, char c)
 {
@@ -65,9 +67,9 @@ char	**ft_split(const char	*s, char c)
 {
 	char	**splited;
 	int		word_count;
-	char	*word;
 	int		i;
 
+	i = 0;
 	word_count = ft_wordcount(s, c);
 	splited = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (!splited)

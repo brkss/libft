@@ -6,9 +6,10 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:29:37 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/04 17:03:29 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/04 18:52:43 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdlib.h>
 
 static int	ft_strlen(const char *s)
 {
