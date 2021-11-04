@@ -6,14 +6,15 @@
 int main(){
 
 	// memmove
-	char s[10] = "abcdef";
-	char *d = s + 1;
-	//char d[10] = "zxywvt";
-	printf("s => %s\n", s);
-	printf("d => %s\n", d);
-	ft_memmove(d, s, 3);
-	printf("s => %s\n", s);
-	printf("d => %s\n", d);
+	char s[15] = "abcdefghijkl";
+	//char *d = s + 3;
+	char d[10] = "zxywvt";
+	printf("s => %s \n", s);
+	printf("d => %s \n", d);
+	//ft_memmove(d, s, 3);
+	memmove(d, s, 3);
+	printf("s => %s \n", s);
+	printf("d => %s \n", d);
 
 	
 	// calloc
