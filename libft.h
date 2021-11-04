@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:35:10 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/04 16:32:03 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/04 17:26:36 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,7 @@ char	*ft_substr(char const *s, unsigned int start, unsigned int len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(const char	*s, char c)
 char	*ft_itoa(int n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void 	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 #endif

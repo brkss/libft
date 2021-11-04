@@ -57,3 +57,7 @@ ft_strtrim		YES		YES		NO
 ft_split		YES		YES		NO
 
 ft_itoa			YES		YES		NO			HANDLE INT MAX RANGE !!
+
+ft_strmapi		YES		YES		NO
+
+ft_striteri		NO		NO		NO
