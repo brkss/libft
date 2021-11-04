@@ -47,3 +47,11 @@ atoi			YES		YES		NO
 calloc			YES		YES		NO
 
 strdup			YES		YES		NO
+
+ft_strjoin		YES		YES		NO
+
+ft_substr		YES		YES		NO
+
+ft_strtrim		YES		YES		NO
+
+ft_split		NO		NO		NO
