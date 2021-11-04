@@ -5,12 +5,19 @@
 #include <unistd.h>
 int main(){
 
-	
+	// ft strjoin
+	char *s1 = "hello ";
+	char *s2 = "world";
+	char *joined = ft_strjoin(s1, s2);
+	printf("joined string -> %s\n", joined);
+
 	// ft_substr
+	/*
 	char src[85] = "Hello World This Is A Test";
 	char *sub = ft_substr(src, 6, 4);
 	printf("sub => %s \n", sub);
-	
+	*/
+
 	// memmove
 	/*
 	char s[15] = "abcdefghijkl";
