@@ -20,7 +20,7 @@ bzero			YES		YES		NO
 
 memcpy			YES		YES		NO			CHECK OVERLAP WHEN COMPARING WITH ORIGINAL !
 
-memmove			NO		NO		NO
+memmove			YES		YES		NO
 
 strlcpy			YES		YES		NO
 
