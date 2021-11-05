@@ -6,10 +6,12 @@
 int main(){
 
 	// ft strjoin
+	/*
 	char *s1 = "hello ";
 	char *s2 = "world";
 	char *joined = ft_strjoin(s1, s2);
 	printf("joined string -> %s\n", joined);
+	*/
 
 	// ft_substr
 	/*
