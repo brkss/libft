@@ -70,6 +70,29 @@ ft_putendl_fd	YES		YES		NO
 
 ft_putnbr_fd	YES		YES		NO
 
+==================================
+
+
+ft_lstnew		YES		YES		NO
+
+ft_lstadd_front YES		YES		NO
+
+ft_lstsize		YES		YES		NO
+
+ft_lstlast		YES		YES		NO
+
+ft_lstadd_back	YES		YES		NO
+
+ft_lstdelone	YES		NO		NO			CHECK FREE !!!
+
+ft_lstclear		NO		NO		NO
+
+ft_lstiter		NO		NO		NO
+
+ft_lstmap		No		NO		NO
+
+
+
 
 
 	
