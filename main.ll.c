@@ -6,8 +6,20 @@
 
 void	del(void *content)
 {
+	char *s;
+
+	s = (char *)content;
+	strcpy(s, "xxxx");
+	printf("content %s \n", (char *)content);
 	//printf("content from delete => %s \n", (char *)content);
-	free(content);
+	//free(content);
+}
+void	*fp(void *content)
+{
+	void *s;
+	
+	s = ft_strjoin((char *)content, "xyz");
+	return (s);
 }
 
 char *createcontent(char *s)
@@ -46,10 +58,12 @@ int main()
 	ft_lstadd_back(&HEAD, ft_lstnew(createcontent("node 6")));
 	
 	show_linkedlist(HEAD);
-
-	ft_lstclear(&HEAD, d);
-
-	show_linkedlist(HEAD);
+	
+	t_list *r = ft_lstmap(HEAD, &fp, d);
+	//ft_lstclear(&HEAD, d);
+	//ft_lstiter(HEAD, d);
+	printf("\n");
+	show_linkedlist(r);
 	
 	return (0);
 }

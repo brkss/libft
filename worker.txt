@@ -83,9 +83,9 @@ ft_lstlast		YES		YES		NO
 
 ft_lstadd_back	YES		YES		NO
 
-ft_lstdelone	YES		NO		NO			CHECK FREE !!!
+ft_lstdelone	YES		YES		NO			CHECK FREE !!!
 
-ft_lstclear		NO		NO		NO
+ft_lstclear		YES		YES		NO
 
 ft_lstiter		NO		NO		NO
 
