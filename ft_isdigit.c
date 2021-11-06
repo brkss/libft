@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 12:45:52 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/06 13:14:45 by bberkass         ###   ########.fr       */
+/*   Created: 2021/11/01 15:21:06 by bberkass          #+#    #+#             */
+/*   Updated: 2021/11/06 11:23:30 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int	ft_isdigit(unsigned char d)
 {
-	t_list	*p;
-
-	p = *lst;
-	while (p->next)
-	{
-		p = p->next;
-	}
-	
-	if (p->content)
-		p->next = new;
+	if (d >= '0' && d <= '9')
+		return (1);
+	return (0);
 }

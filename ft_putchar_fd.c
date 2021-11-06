@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 12:45:52 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/06 13:14:45 by bberkass         ###   ########.fr       */
+/*   Created: 2021/11/04 17:28:48 by bberkass          #+#    #+#             */
+/*   Updated: 2021/11/06 13:02:51 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h" 
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_putchar_fd(char c, int fd)
 {
-	t_list	*p;
-
-	p = *lst;
-	while (p->next)
-	{
-		p = p->next;
-	}
-	
-	if (p->content)
-		p->next = new;
+	write(fd, &c, 1);
 }
+/*
+int main()
+{
+	int fd = open("file.txt", O_WRONLY | O_APPEND);
+	ft_putchar_fd('d', fd);
+	printf("file descriptor => %d", fd);
+	return (0);
+}*/

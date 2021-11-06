@@ -6,12 +6,10 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:36:20 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/05 12:44:18 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/06 13:14:16 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)

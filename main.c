@@ -1,10 +1,21 @@
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
 #include <string.h>
 #include <unistd.h>
+*/
+#include <fcntl.h>
+
 int main(){
 
+
+	// ft putchar fd
+	/*
+	int fd = open("file.txt", O_WRONLY | O_APPEND);
+	ft_putchar_fd('d', fd);
+	printf("file descriptor => %d", fd);
+	*/
 	// ft strjoin
 	/*
 	char *s1 = "hello ";
