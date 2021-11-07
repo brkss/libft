@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:32:28 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/06 11:06:49 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/07 18:40:37 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlen(const char *s)
 	size_t	l;
 
 	l = 0;
-	if (!s)
-		return (0);
 	while (s[l])
 		l++;
 	return (l);

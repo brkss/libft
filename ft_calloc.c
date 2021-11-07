@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 18:47:30 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/06 11:31:50 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/07 19:13:33 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ void	*ft_calloc(size_t count, size_t size)
 	
 	t = 0;
 	volume = size * count;
-	ptr = malloc(volume);
+	if(!(ptr = (void *)malloc(volume)))
+		return (0);
 	ft_bzero(ptr, volume);
 	return (ptr);
 }
