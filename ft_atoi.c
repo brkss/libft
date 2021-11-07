@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:20:24 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/06 11:29:17 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/07 17:02:25 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,13 @@ int	ft_atoi(const char *str)
 	ft_checksign_atoi(str, &negative, &i);
 	j = i;
 	while (str[i] >= '0' && str[i] <= '9')
-	{
+	{ 
+		/*
+		if ((unsigned long)(total * 10 + (int)(str[i] - 48)) > (unsigned long)9223372036854775807 && !negative )
+				return (-1);
+		else if ((unsigned long)(total * 10 + (int)(str[i] - 48)) > (unsigned long)9223372036854775807 + 1 && negative)
+			return (0);
+		*/
 		total = total * 10 + (int)(str[i] - 48);
 		i++;
 	}

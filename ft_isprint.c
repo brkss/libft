@@ -6,13 +6,13 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 16:43:31 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/06 11:24:12 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/07 13:04:34 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(unsigned char c)
+int	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= 126 )
 		return (1);

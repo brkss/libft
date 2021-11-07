@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:35:10 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/06 13:13:31 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/07 13:05:04 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ typedef struct s_list
 } t_list;
 
 
-int				ft_isalpha(unsigned char c);
-int				ft_isdigit(unsigned char d);
-int				ft_isalnum(unsigned char c);
+int				ft_isalpha(int c);
+int				ft_isdigit(int d);
+int				ft_isalnum(int c);
 int				ft_isascii(int c);
-int				ft_isprint(unsigned char c);
+int				ft_isprint(int c);
 size_t			ft_strlen(const char *s);
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
