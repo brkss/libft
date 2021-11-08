@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:20:24 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/07 21:50:30 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:47:57 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,10 @@ int	ft_atoi(const char *str)
 	{ 
 		if ((unsigned long)total * 10 + (str[i] - 48) > (unsigned long)9223372036854775807 && !negative )
 				return (-1);
+		if ((unsigned long)total * 10 + (str[i] - 48) > (unsigned long)9223372036854775807 + 1 && negative )
+				return (0);
+		total = total * 10 + (str[i] - 48);
 		i++;
-	total = total * 10 + (str[i] - 48);
 	}
 	if (negative)
 		return (total * -1);

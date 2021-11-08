@@ -6,22 +6,11 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:00:26 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/04 12:57:09 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/08 13:50:39 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-static int	ft_strlen(const char *s)
-{
-	int	l;
-
-	l = 0;
-	while (s[l])
-		l++;
-	return (l);
-}
+#include "libft.h"
 
 static int	ft_chrinstr(const char *s, char c)
 {
@@ -44,17 +33,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	int		start;
 	int		end;
-
+	
 	i = 0;
 	sl = ft_strlen(s1);
 	start = 0;
 	end = sl;
 	while (s1[start] && ft_chrinstr(set, s1[start]))
 		start++;
-	while (end >= 0 && ft_chrinstr(set, s1[end - 1]))
+	while (end >= 0 && ft_chrinstr(set, s1[end]))
 		end--;
-	trimed = (char *)malloc(((end - start) + 1) * sizeof(char));
-	if (!trimed)
+	if(!(trimed = (char *)malloc(((end - start) + 1) * sizeof(char))))
 		return (0);
 	while (start < end)
 	{
@@ -62,6 +50,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 		i++;
 	}
-	trimed[start] = '\0';
+	trimed[i] = '\0';
 	return (trimed);
 }
+
+/*
+#include <stdio.h>
+int main()
+{
+	char *s1 = "  \t \t \n   \n\n\n\t";
+	char *s2 = "";
+  	
+	char *ret = ft_strtrim(s1, " \n\t");
+	printf("res => %s\n", ret);
+	return (0);
+}*/

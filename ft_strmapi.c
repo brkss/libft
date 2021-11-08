@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:29:37 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/06 12:56:26 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/08 11:45:05 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int				l;
 	char			*res;
 
+	if(!s)
+		return (0);
 	i = 0;
 	l = ft_strlen(s);
-	res = (char *)malloc(l * sizeof(char));
-	if (res == 0)
+	res = (char *)malloc((l + 1) * sizeof(char));
+	if (!res)
 		return (0);
 	while (s[i])
 	{
 		res[i] = f(i, s[i]);
 		i++;
 	}
+	res[i] = '\0';
 	return (res);
 }

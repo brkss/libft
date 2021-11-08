@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 10:55:11 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/07 19:23:08 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:50:56 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,16 @@ char	*ft_substr(char const *s, size_t start, size_t len)
 	size_t			isub;
 	size_t			isrc;
 	char			*sub;
-
+	
+	//return (0);
 	isub = 0;
 	isrc = start;
+	if (!s)
+		return (0);
 	if(!(sub = (char *)malloc((len + 1) * sizeof(char))))
 		return(0);
-	if (!s || start >= ft_strlen(s))
-		return (0);
+	if (start >= ft_strlen(s))
+		return (sub);
 	while (s[isrc] && isub < len)
 	{
 		sub[isub] = s[isrc];
@@ -33,3 +36,15 @@ char	*ft_substr(char const *s, size_t start, size_t len)
 	sub[isub] = '\0';
 	return (sub);
 }
+/*
+#include <stdio.h>
+
+int main()
+{
+	char *s = "this test will break your function";
+	size_t max = ft_strlen(s);
+	printf("res => %s \n", ft_substr(s, max + 5, max));
+
+
+	return (0);
+}*/

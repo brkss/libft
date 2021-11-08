@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 18:41:29 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/06 13:05:20 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/08 11:46:44 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if(!s)
+		return ;
 	while (*s)
 	{
 		write(fd, s, 1);
