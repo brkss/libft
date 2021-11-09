@@ -5,76 +5,57 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 11:24:36 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/09 12:21:10 by bberkass         ###   ########.fr       */
+/*   Created: 2021/11/04 12:00:26 by bberkass          #+#    #+#             */
+/*   Updated: 2021/11/09 13:11:47 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-// check if char from s1 exist in the set
-int	ft_chrins(const char *set, char c)
+static int	ft_chrinstr(const char *s, char c)
 {
 	int	i;
 
 	i = 0;
-	while(set[i])
+	while (s[i])
 	{
-		printf("============ \n");
-		printf("cmp %c : %c \n", set[i], c);
-		if(set[i] == c)
-		{
-			printf("catch %c : %c \n", set[i], c);
+		if (s[i] == c)
 			return (1);
-		}
-		i++;	
-		printf("============ \n");
-	}
+		i++;
+	}	
 	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
+	char	*trimed;
+	int		sl;
 	int		i;
 	int		start;
 	int		end;
-	char	*s;
 
-	s = NULL;	
-	i = 0;
-	start = 0;
-	end = ft_strlen(s1) - 1;
-	// find the start while chr in s1 is in the set!
-	while(s1[start] && ft_chrins(set, s1[start]))
-		start++;
-	// find the end  while chr in s1 is in the set!
-	while(end >= 0 && ft_chrins(set, s1[end]))
-		end--;
-	if(end == -1)
-		s = (char *)malloc(sizeof(char));
-	else
-		s = (char *)malloc((end - start) + 2 * sizeof(char));
-	if(!s)
+	if(!s1 || !set)
 		return (0);
-	printf("start => %d \n", start);
-	printf("end => %d \n", end);
-	while(start < end)
+	i = 0;
+	sl = ft_strlen(s1);
+	start = 0;
+	end = sl - 1;
+	while (s1[start] && ft_chrinstr(set, s1[start]))
+		start++;
+	while (end >= 0 && ft_chrinstr(set, s1[end]))
+		end--;
+	if(end <= -1)
+		trimed = (char *)malloc(sizeof(char));
+	else
+		trimed = (char *)malloc(((end - start) + 2) * sizeof(char));
+	if(!trimed)
+		return (0);
+	while (start < end + 1)
 	{
-		s[i] = s1[start];
+		trimed[i] = (char)s1[start];
 		start++;
 		i++;
 	}
-	s[i] = '\0';
-	printf("s1 => %s \n", s1);
-
-	return (s);
+	trimed[i] = '\0';
+	return (trimed);
 }
-
-int main()
-{
-	printf("trim => %s \n", ft_strtrim("00011s0011000", "01"));
-	return (0);
-}
-
-// [000] [s]abcdfffffff000ss[end] [00]

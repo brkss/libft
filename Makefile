@@ -6,7 +6,7 @@
 #    By: bberkass <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 16:15:28 by bberkass          #+#    #+#              #
-#    Updated: 2021/11/06 21:41:04 by bberkass         ###   ########.fr        #
+#    Updated: 2021/11/09 12:40:27 by bberkass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,7 @@ ${NAME}:	${OBJS}
 			ar rc ${NAME} ${OBJS}
 
 .c.o:
-			${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I ${HEADERS}
-
+			${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I ${HEADERS} 
 clean:
 			rm -f ${OBJS}
 

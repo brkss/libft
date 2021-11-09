@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:03:50 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/06 11:50:52 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/09 13:15:19 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static char	*ft_popword(const char *s, char c)
 	int		word_length;
 	int		i;
 	char	*word;
-
+	
 	i = 0;
 	word_length = ft_wordlength(s, c);
 	word = (char *)malloc((word_length + 1) * sizeof(char));
@@ -68,7 +68,9 @@ char	**ft_split(const char	*s, char c)
 	char	**splited;
 	int		word_count;
 	int		i;
-
+	
+	if(!s)
+		return (0);
 	i = 0;
 	word_count = ft_wordcount(s, c);
 	splited = (char **)malloc((word_count + 1) * sizeof(char *));
