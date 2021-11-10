@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:29:37 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/08 11:45:05 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/10 15:14:38 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int				l;
 	char			*res;
 
-	if(!s)
+	if (!s)
 		return (0);
 	i = 0;
 	l = ft_strlen(s);

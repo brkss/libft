@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:23:20 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/07 12:12:31 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/10 14:11:37 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ unsigned int	ft_strlcat(char *dest, const char *src, unsigned int dstsize)
 		t++;
 	}
 	dest[t + dl] = '\0';
-		return (dl + sl);
+	return (dl + sl);
 }
