@@ -6,19 +6,21 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 10:55:11 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/11 01:11:15 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/11 15:03:52 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	len_byindex(const char *s, int index)
+static int	len_byindex(const char *s, int index, size_t len)
 {
 	int	l;
 
 	l = index;
 	while (s[l])
 		l++;
+	if ((int)len < (l - index))
+		return ((int)len);
 	return (l - index);
 }
 
@@ -31,9 +33,9 @@ char	*ft_substr(char const *s, size_t start, size_t len)
 
 	isub = 0;
 	isrc = start;
-	l = len_byindex(s, start);
 	if (!s)
 		return (0);
+	l = len_byindex(s, start, len);
 	if (start >= ft_strlen(s))
 		sub = (char *)malloc(sizeof(char));
 	else
@@ -49,15 +51,3 @@ char	*ft_substr(char const *s, size_t start, size_t len)
 	sub[isub] = '\0';
 	return (sub);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-	char *s = "this test will break your function";
-	size_t max = ft_strlen(s);
-	printf("res => %s \n", ft_substr(s, max + 5, max));
-
-
-	return (0);
-}*/
