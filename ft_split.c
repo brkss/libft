@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:03:50 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/10 15:16:34 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/11 13:36:47 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ static int	ft_wordcount(const char *s, char c)
 	{
 		while (*s && *s == c)
 			s++;
+		if(*s)
+			count++;
 		while (*s && *s != c)
 			s++;
-		if (*s)
-			count++;
 	}
 	return (count);
 }
@@ -68,6 +68,7 @@ char	**ft_split(const char	*s, char c)
 	char	**splited;
 	int		word_count;
 	int		i;
+	char	*word;
 
 	if (!s)
 		return (0);
@@ -80,9 +81,10 @@ char	**ft_split(const char	*s, char c)
 	{
 		while (*s && *s == c)
 			s++;
-		if (*s && ft_popword(s, c))
+		if(*s)
 		{
-			splited[i] = ft_popword(s, c);
+			word = ft_popword(s, c);
+			splited[i] = word;
 			i++;
 		}
 		while (*s && *s != c)
@@ -91,3 +93,18 @@ char	**ft_split(const char	*s, char c)
 	splited[i] = 0;
 	return (splited);
 }
+/*
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	char *splitme = ft_strdup("--1-2--3---4----5-----42");
+	char **tab = ft_split(splitme, '-');
+	int i = 0;
+	while(tab[i])
+	{
+		printf("%s \n", tab[i]);
+		i++;
+	}
+	return (0);
+}*/
