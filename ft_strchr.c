@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:41:27 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/06 11:01:09 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/10 23:19:36 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*t_s;
+	unsigned char	*t_s;
 
-	t_s = (char *)s;
+	t_s = (unsigned char *)s;
 	while (*t_s)
 	{
-		if (*t_s == c)
-			return (t_s);
+		if (*t_s == (unsigned char)c)
+			return ((char *)t_s);
 		t_s++;
 	}
-	if (*t_s == c)
-		return (t_s);
+	if (*t_s == (unsigned char)c)
+		return ((char *)t_s);
 	return (0);
 }
