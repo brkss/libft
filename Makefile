@@ -6,13 +6,13 @@
 #    By: bberkass <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 16:15:28 by bberkass          #+#    #+#              #
-#    Updated: 2021/11/11 22:40:37 by bberkass         ###   ########.fr        #
+#    Updated: 2021/11/11 23:17:47 by bberkass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=libft.a
 
-CC			= gcc
+CC			= cc
 
 FLAGS		= -Wall -Wextra -Werror
 
@@ -26,29 +26,26 @@ SRCS		= 	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c
 BSRCS		= 	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c \
 					ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
 
-print:		
-		echo $(SRCS)
-
-
 OBJS		= ${SRCS:.c=.o}
 
-BOBJ		= ${BSRC:.c=.o}
+BOBJ		= ${BSRCS:.c=.o}
 
 HEADERS		= .
 
-all: 		${NAME}
+
+all: 		${NAME} 
 
 ${NAME}:	${OBJS}
-			ar rc ${NAME} ${OBJS}
+
+
+%.o: %.c
+			${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I ${HEADERS} 
+			ar rcs ${NAME} ${<:.c=.o}
 
 bonus:		${BOBJ}
-			${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I ${HEADERS}
-			ar rc bonus.a ${BOBJ}
 
-.c.o:
-			${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I ${HEADERS} 
 clean:
-			rm -f ${OBJS}
+			rm -f ${OBJS} ${BOBJ}
 
 fclean: 	clean
 			rm -f ${NAME}
