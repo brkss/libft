@@ -1,3 +1,0 @@
-
-
-norminette ft_*
