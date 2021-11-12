@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:03:50 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/11 13:36:47 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/12 03:14:40 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_wordcount(const char *s, char c)
 	{
 		while (*s && *s == c)
 			s++;
-		if(*s)
+		if (*s)
 			count++;
 		while (*s && *s != c)
 			s++;
@@ -68,7 +68,6 @@ char	**ft_split(const char	*s, char c)
 	char	**splited;
 	int		word_count;
 	int		i;
-	char	*word;
 
 	if (!s)
 		return (0);
@@ -81,10 +80,9 @@ char	**ft_split(const char	*s, char c)
 	{
 		while (*s && *s == c)
 			s++;
-		if(*s)
+		if (*s)
 		{
-			word = ft_popword(s, c);
-			splited[i] = word;
+			splited[i] = ft_popword(s, c);
 			i++;
 		}
 		while (*s && *s != c)
