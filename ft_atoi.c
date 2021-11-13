@@ -6,7 +6,7 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:20:24 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/10 13:55:24 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/13 15:18:06 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	ft_checksign(const char *str, int *negative, unsigned int *index)
 	}
 }
 
-int	check_long(int total, char c, int negative)
+static int	check_long(int total, char c, int negative)
 {
 	int	res;
 
