@@ -6,21 +6,13 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:23:20 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/12 22:20:19 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/13 21:39:23 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static unsigned int	ft_strlen(const char *s)
-{
-	unsigned int	l;
+#include "libft.h"
 
-	l = 0;
-	while (s[l])
-		l++;
-	return (l);
-}
-
-unsigned int	ft_strlcat(char *dest, const char *src, unsigned int dstsize)
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
 	unsigned int	t;
 	unsigned int	sl;
