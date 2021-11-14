@@ -6,21 +6,11 @@
 /*   By: bberkass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 17:23:52 by bberkass          #+#    #+#             */
-/*   Updated: 2021/11/10 14:10:46 by bberkass         ###   ########.fr       */
+/*   Updated: 2021/11/14 15:26:55 by bberkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-static unsigned int	ft_strlen(const char *s)
-{
-	unsigned int	l;
-
-	l = 0;
-	while (s[l])
-		l++;
-	return (l);
-}
+#include "libft.h" 
 
 char	*ft_strdup(const char *s1)
 {
